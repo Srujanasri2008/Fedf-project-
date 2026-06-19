@@ -396,18 +396,28 @@ const Dashboard = () => {
         return <PostCallSummary />;
 
       case "History Log":
-      case "Appointment Overview":
-      case "Reports / Analytics":
         return <HistoryLog />;
 
       case "Notifications":
         return <Notifications />;
 
       case "Admin Module":
+        return <AdminModule mode="overview" />;
+
       case "User Management":
+        return <AdminModule mode="users" />;
+
       case "Doctor Management":
+        return <AdminModule mode="doctors" />;
+
+      case "Appointment Overview":
+        return <AdminModule mode="appointments" />;
+
+      case "Reports / Analytics":
+        return <AdminModule mode="analytics" />;
+
       case "System Settings":
-        return <AdminModule />;
+        return <AdminModule mode="settings" />;
 
       default:
         return <PreCallCheck />;
